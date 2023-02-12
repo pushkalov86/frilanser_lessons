@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Завдання №4</h1>
+  <p>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+  <script>
+    let length_cm = parseFloat(prompt('Довжина в сантиметрах', '0'));
+    let length_m = length_cm / 100;
+    let length_km = (length_cm / 100000).toFixed(3);
+
+
+    document.write(`
+      <p> ${length_cm} см дорівнює ${length_m} м.</p>
+      <p> ${length_cm} см дорівнює ${length_km} км.</p>
+    `);
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>16.	З клавіатури вводиться номер місяця. Визначити, який буде місяць через вказану кількість N місяців.</p>
+  <script>
+    let month = parseInt(prompt('Кількість місяців', ''));
+
+    let result_1 = month % 12;
+    let result = result_1.toFixed().replace('1', 'січень').replace('2', 'лютий').replace('3', 'березень').replace('4', 'квітень')
+    .replace('5', 'травень').replace('6', 'червень').replace('7', 'липень').replace('8', 'серпень').replace('9', 'вересень').replace('10', 'жовтень').replace('11', 'листопад').replace('12', 'грудень');
+
+    document.write(`
+      <p>Місяць ${result} .</p>
+    `);
+  </script>
+</body>
+</html>

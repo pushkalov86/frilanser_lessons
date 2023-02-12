@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>7.	Скласти алгоритм, який обчислює цілу і дробову частину даного числа х. Наприклад: число 23,56  => ціла: 23, дробова: 0,56.</p>
+  <script>
+    let number = parseFloat(prompt('Розділіть число на цілу і дробову частини', ''));
+
+    let wholePart = parseInt(number);
+    let fractionalPart = parseFloat(number - wholePart).toFixed(2);
+
+    document.write(`
+      <p>Ціла частина = ${wholePart}</p>
+      <p>Дробова частина = ${fractionalPart}</p>
+    `);
+  </script>
+</body>
+</html>

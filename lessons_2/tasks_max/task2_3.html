@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>3.	З клавіатури вводяться вартість одиниці та кількість одиниць двох товарів. Вивести на екран вартість кожного з видів товарів окремо і загальну вартість.</p>
+  <script>
+
+    const priceProduct_1 = parseInt(prompt('Вартість першого товару', '0'));
+    const quantityProduct_1 = parseInt(prompt('Кількість першого товару', '0'));
+    const priceProduct_2 = parseInt(prompt('Вартість другого товару', '0'));
+    const quantityProduct_2 = parseInt(prompt('Кількість:', '0'));
+    
+    const totalPrice_1 = priceProduct_1 * quantityProduct_1;
+    const totalPrice_2 = priceProduct_2 * quantityProduct_2;
+    const totalPrice = totalPrice_1 + totalPrice_2;
+
+    document.write(`
+    <div>
+      <table border="2px">
+        <tr>
+          <th>Товар</th>
+          <th>Ціна товару,<br> грн</th>
+          <th>Кіл-сть товару,<br> шт</th>
+          <th>Сума,<br> грн</th>
+        </tr>
+        <tr>
+          <th>Перший товар</th>
+          <th>${priceProduct_1}</th>
+          <th>${quantityProduct_1}</th>
+          <th>${totalPrice_1}</th>
+        </tr>
+        <tr>
+          <th>Другий товар</th>
+          <th>${priceProduct_2}</th>
+          <th>${quantityProduct_2}</th>
+          <th>${totalPrice_2}</th>
+        </tr>
+        <tr>
+          <th>Всього:</th>
+          <th></th>
+          <th></th>
+          <th>${totalPrice}</th>
+        </tr>
+      </table>
+    </div>
+    `);
+  </script>
+</body>
+</html>

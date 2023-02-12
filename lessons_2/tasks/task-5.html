@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Завдання №5</h1>
+  <p>Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</p>
+  <script>
+    let time_ = parseInt(prompt('Кількість секунд з початку доби', '0'));
+    
+    let time_h = Math.floor(time_ / 3600);
+    let time_m = Math.floor((time_ % 3600) / 60)
+    let time_s = time_ - time_h * 3600 - time_m * 60;
+
+    document.write(`
+      <p>${time_} секунд дорівнює ${time_h}год ${time_m}хв ${time_s}c.</p>
+    `);
+  </script>
+</body>
+</html>

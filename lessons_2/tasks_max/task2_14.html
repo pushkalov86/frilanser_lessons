@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>14.	З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.</p>
+  <script>
+    let day = prompt('Кількість днів', '');
+    let result = day.replace('1', 'понеділок').replace('2', 'вівторок')
+      .replace('3', 'середа').replace('4', 'четвер').replace('5', 'пятниця').replace('6', 'субота').replace('7', 'Неділя');
+
+    document.write(`
+      <p>${day} день тижня є ${result} .</p>
+    `);
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Завдання №2</h1>
+  <p>Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</p>
+  <script>
+    let year = parseInt(prompt('Який зараз рік', '2023'));
+    let old = parseInt(prompt('Вкажи твій рік народження', '1986'));
+    let result = year - old;
+    document.write(`
+      <p>Тобі ${result} років</p>
+    `)
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>11.	Дано поточну кількість годи, хвилин, секунд (як на годиннику). Визначити 1) яка кількість секунд буде на годиннику через N секунд.
+    2) яка кількість хвилин буде на годиннику через N секунд, X хвилин.
+    </p>
+  <script>
+    let time = prompt('Введіть час в форматі хх.хх.хх', '');
+    let second_N = parseInt(prompt('Введіть кількість секунд', ''));
+    let minute_X = parseInt(prompt('Введіть кількість хвилин', ''));
+
+    let hour = parseInt(time.substr(0, 2));
+    let minute = parseInt(time.substr(3, 2));
+    let second = parseInt(time.substr(6, 2));
+
+    second = second + second_N;
+    minute = minute + minute_X;
+    //примітивно
+
+
+    document.write(`
+      <p>${hour} : ${minute} : ${second}</p>
+    `);
+  </script>
+</body>
+</html>

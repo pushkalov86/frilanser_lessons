@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>12.	З клавіатури вводиться кількість монет номіналом 2 копійки (5коп, 25коп, 50 коп). Визначити скільки гривень і копійок є у даній сумі.
+    </p>
+  <script>
+    let cent_2 = parseInt(prompt('Введіть монети номіналом 2 копійки', ''));
+    let cent_5 = parseInt(prompt('Введіть монети номіналом 5 копійок', ''));
+    let cent_25 = parseInt(prompt('Введіть монети номіналом 25 копійок', ''));
+    let cent_50 = parseInt(prompt('Введіть монети номіналом 50 копійок', ''));
+
+    let sum = 2 * cent_2 + 5 * cent_5 + 25 * cent_25 + 50 * cent_50;
+
+    let dollar = Math.floor(sum / 100);
+    let cent = sum - dollar * 100;
+
+    document.write(`
+      <p>Сума: ${dollar} гривень ${cent} копійок.</p>
+    `);
+  </script>
+</body>
+</html>

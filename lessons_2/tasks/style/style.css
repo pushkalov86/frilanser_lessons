@@ -1,0 +1,5 @@
+.Check table {
+  display: inline-flex;
+  border: 1px solid black;
+  font-family:Arial, Helvetica, sans-serif;
+}

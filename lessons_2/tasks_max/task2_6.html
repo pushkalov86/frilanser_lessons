@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>6.	Дано три дійсні змінні a, b і c.  Скласти  алгоритм, який міняє місцями значення цих змінних наступним чином: змінна a набуває значення змінної b, змінна b набуває значення змінної c, а змінна  c – попереднє значення змінної a.</p>
+  <script>
+    let a = parseInt(prompt('Змінна a', ''));
+    let b = parseInt(prompt('Змінна b', ''));
+    let c = parseInt(prompt('Змінна c', ''));
+
+    let x = a;
+    a = b;
+    b = c;
+    c = x;
+
+    document.write(`
+      <p>a = ${a}</p>
+      <p>b = ${b}</p>
+      <p>c = ${c}</p>
+    `);
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Завдання №1</h1>
+  <script>
+    let x = parseFloat(prompt('Введіть значення х', ''));
+    let y = parseFloat(prompt('Введіть значення х', ''));
+    let sum = x + y;
+    let mltp = x * y;
+    let div = x / y;
+    document.write(`
+      <table border="2px">
+        <tr>
+          <th>Дія</th>
+          <th>Результат</th>
+        </tr>
+        <tr>
+          <th>Сума</th>
+          <th>${sum}</th>
+        </tr>
+        <tr>
+          <th>Добуток</th>
+          <th>${mltp}</th>
+        </tr>
+        <tr>
+          <th>Частка</th>
+          <th>${div}</th>
+        </tr>
+      </table>
+    `)
+  </script>
+</body>
+</html>

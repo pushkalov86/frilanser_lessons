@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>15.	З клавіатури вводиться кількість місяців, які пройшли від деякого моменту часу. Вивести повну кількість років і місяців. Наприклад, дано 28 місяців, а вивести 2 роки і 4 місяці.</p>
+  <script>
+    let day = parseInt(prompt('Кількість місяців', ''));
+    let result = day.replace('1', 'понеділок').replace('2', 'вівторок')
+      .replace('3', 'середа').replace('4', 'четвер').replace('5', 'пятниця').replace('6', 'субота').replace('7', 'Неділя');
+
+    document.write(`
+      <p>${day} день тижня є ${result} .</p>
+    `);
+  </script>
+</body>
+</html>

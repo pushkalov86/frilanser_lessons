@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../tasks/style/style.css" type="text/css">
+</head>
+<body>
+  <h1>Завдання №6</h1>
+  <p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+  <script>
+    const nameproduct_1 = prompt('Назва товару', '');
+    const priceProduct_1 = parseFloat(prompt('Вартість:', '0'));
+    const quantityProduct_1 = parseFloat(prompt('Кількість:', '0'));
+    const nameproduct_2 = prompt('Назва товару', '');
+    const priceProduct_2 = parseFloat(prompt('Вартість:', '0'));
+    const quantityProduct_2 = parseFloat(prompt('Кількість:', '0'));
+    const nameproduct_3 = prompt('Назва товару', '');
+    const priceProduct_3 = parseFloat(prompt('Вартість:', '0'));
+    const quantityProduct_3 = parseFloat(prompt('Кількість:', '0'));
+    
+    const totalPrice_1 = priceProduct_1 * quantityProduct_1;
+    const totalPrice_2 = priceProduct_2 * quantityProduct_2;
+    const totalPrice_3 = priceProduct_3 * quantityProduct_3;
+    const totalPrice = totalPrice_1 + totalPrice_2 + totalPrice_3;
+
+    document.write(`
+    <div class="Check">
+      <table>
+        <tr>
+          <th>Товар</th>
+          <th>Ціна товару,<br> грн</th>
+          <th>Кіл-сть товару,<br> шт</th>
+          <th>Сума,<br> грн</th>
+        </tr>
+        <tr>
+          <th>${nameproduct_1}</th>
+          <th>${priceProduct_1}</th>
+          <th>${quantityProduct_1}</th>
+          <th>${totalPrice_1}</th>
+        </tr>
+        <tr>
+          <th>${nameproduct_2}</th>
+          <th>${priceProduct_2}</th>
+          <th>${quantityProduct_2}</th>
+          <th>${totalPrice_2}</th>
+        </tr>
+        <tr>
+          <th>${nameproduct_3}</th>
+          <th>${priceProduct_3}</th>
+          <th>${quantityProduct_3}</th>
+          <th>${totalPrice_3}</th>
+        </tr>
+        <tr>
+          <th>Всього:</th>
+          <th></th>
+          <th></th>
+          <th>${totalPrice}</th>
+        </tr>
+      </table>
+    </div>
+    `);
+  </script>
+</body>
+</html>
