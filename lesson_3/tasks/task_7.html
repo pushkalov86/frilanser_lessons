@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься</p>
+  <script>
+    const numberDayMonth = parseInt(prompt('Введіть номер місяця', ''));
+
+    if (numberDayMonth >= 3 && numberDayMonth <= 5)
+      document.write(`Пора року - весна`);
+    else if (numberDayMonth >= 6 && numberDayMonth <= 8)
+      document.write(`Пора року - літо`);
+    else if (numberDayMonth >= 9 && numberDayMonth <= 11)
+      document.write(`Пора року - осінь`);
+    else if (numberDayMonth >= 1 && numberDayMonth <= 2 || numberDayMonth === 12)
+      document.write(`Пора року - зима`);
+    else document.write(`Некоректне значення`);
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=s, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.</p>
+  <script>
+    price = parseFloat(prompt('Введіть ціну товару', ''));
+    currentMany = parseFloat(prompt('Кількість ваших грошей', ''));
+
+    if (price > currentMany) {
+      document.write(`Вам відмовлено у покупці`);
+    }
+    if ((price === currentMany) || (currentMany - price < 4)) {
+      document.write(`Дякуємо за покупку`);
+    } 
+    if ( currentMany - price >= 4)
+      document.write(`Дякуємо за покупку, бажаєте купити лотерею за 4 грн`);
+
+  </script>
+</body>
+</html>

@@ -9,12 +9,15 @@
 <body>
   <p>14.	З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.</p>
   <script>
-    let day = prompt('Кількість днів', '');
-    let result = day.replace('1', 'понеділок').replace('2', 'вівторок')
-      .replace('3', 'середа').replace('4', 'четвер').replace('5', 'пятниця').replace('6', 'субота').replace('7', 'Неділя');
+    let dayNumber = parseInt(prompt('День тижня', ''));
+    let N = parseInt(prompt('Кількість днів N', ''));
+    const min = 1;
+    const max = 7;
+
+    dayNumber = (dayNumber - 1 + N) % (max - min + 1) + 1;
 
     document.write(`
-      <p>${day} день тижня є ${result} .</p>
+      <p>Через ${N} днів буде  ${dayNumber}.</p>
     `);
   </script>
 </body>

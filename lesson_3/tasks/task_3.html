@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=s, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
+  <script>
+    const N1 = parseInt(prompt('перша спроба', ''));
+    const N2 = parseInt(prompt('друга спроба', ''));
+
+    const min = 1;
+    const max = 5;
+    let randomN = min + Math.floor(Math.random() * (max - min + 1))
+    let result;
+
+
+    if (N1 === randomN)
+      document.write(result = 'ви вгадали з першої спроби')
+      else if (N2 ===randomN)
+      document.write(result = 'ви вгадали здругої спроби')
+      else document.write(result = 'ви не вгадали')
+
+    document.write(`
+    <table border="2px">
+        <tr>
+          <th>Випадкове число</th>
+          <th>перша спроба</th>
+          <th>друга спроба</th>
+        </tr>
+        <tr>
+          <th>${randomN}</th>
+          <th>${N1}</th>
+          <th>${N2}</th>
+        </tr>
+      </table>
+      <p>${result}</p>
+    `)
+  </script>
+</body>
+</html>

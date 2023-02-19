@@ -9,12 +9,16 @@
 <body>
   <p>17.	Зашифрувати один введений англійський символ у верхньому регістрі (один з символів: A,B,…Z)  методом зміщення (шифр Цезаря).</p>
   <script>
+    const min = 65;
+    const max = 90;
     let letter = prompt('Вкажіть латинську букву у верхньому регістрі', '');
-
-    letterCode = String.fromCharCode(letter.charCodeAt(0) + 2);
+    let result = letter.charCodeAt(0);
+    const N = 2;
+    result = (result - min + N) % (max - min + 1) + min;
+    result = String.fromCharCode(result);
 
     document.write(`
-      <p>${letter} - ${letterCode}</p>
+      <p>${letter} - ${result} </p>
     `)
   </script>
 </body>

@@ -14,8 +14,8 @@
     const maxMonth = 12;
     const minDay = 0;
     const maxDay = 6;
-    let month = minMonth + Math.floor(Math.random() * maxMonth - minMonth + 1);
-    let day = minDay + Math.floor(Math.random() * maxDay - minDay + 1);
+    let month = minMonth + Math.floor(Math.random() * (maxMonth - minMonth + 1));
+    let day = minDay + Math.floor(Math.random() * (maxDay - minDay + 1));
 
     document.write(`
       <p>Випадковий номер місяця: ${month}</p>

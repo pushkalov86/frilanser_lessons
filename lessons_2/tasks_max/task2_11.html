@@ -7,7 +7,7 @@
   <title>Document</title>
 </head>
 <body>
-  <p>11.	Дано поточну кількість годи, хвилин, секунд (як на годиннику). Визначити 1) яка кількість секунд буде на годиннику через N секунд.
+  <p>11.	Дано поточну кількість годин, хвилин, секунд (як на годиннику). Визначити 1) яка кількість секунд буде на годиннику через N секунд.
     2) яка кількість хвилин буде на годиннику через N секунд, X хвилин.
     </p>
   <script>
@@ -19,8 +19,8 @@
     let minute = parseInt(time.substr(3, 2));
     let second = parseInt(time.substr(6, 2));
 
-    second = second + second_N;
-    minute = minute + minute_X;
+    second = (second + second_N) % 60;
+    minute = (minute + minute_X) % 60;
     //примітивно
 
 
