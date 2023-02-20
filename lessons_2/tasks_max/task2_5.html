@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <p>5.	Визначити, яку платню одержить на фірмі сумісник за виконану роботу, якщо йому нараховано S грн., а податок становить 20%.</p>
-  <script>
-    let salary = parseInt(prompt('Одержана платня в грн', ''));
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      5. Визначити, яку платню одержить на фірмі сумісник за виконану роботу,
+      якщо йому нараховано S грн., а податок становить 20%.
+    </p>
+    <script defer>
+      let salary = parseInt(prompt("Одержана платня в грн", ""));
 
-    let result = salary - salary * 0.2;
-    document.write(`
+      let result = salary - salary * 0.2;
+      document.write(`
       <p>Одержана платня: ${result} грн</p>
     `);
-  </script>
-</body>
+    </script>
+  </body>
 </html>
