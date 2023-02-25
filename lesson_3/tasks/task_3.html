@@ -3,26 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=s, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 <body>
   <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
   <script>
     const N1 = parseInt(prompt('перша спроба', ''));
-    const N2 = parseInt(prompt('друга спроба', ''));
+
 
     const min = 1;
     const max = 5;
     let randomN = min + Math.floor(Math.random() * (max - min + 1))
     let result;
+    let N2 = '';
 
 
-    if (N1 === randomN)
-      document.write(result = 'ви вгадали з першої спроби')
-      else if (N2 ===randomN)
-      document.write(result = 'ви вгадали здругої спроби')
-      else document.write(result = 'ви не вгадали')
+    if (N1 === randomN) {
+      result = 'ви вгадали з першої спроби';
+    } else {
+      N2 = parseInt(prompt('Ви не вгадали, спройте з другої спроби', ''));
+    }
+    if ( N1 !== randomN && N2 === randomN) {
+      result = 'ви вгадали з другої спроби';
+    } else if (N1!== randomN && N2 !== randomN) {
+      result = 'ви не вгадали';
+    }
 
     document.write(`
     <table border="2px">
