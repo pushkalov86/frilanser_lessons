@@ -1,11 +1,9 @@
-let Month = 1;
 let result = 0;
 
 
-for (let i = 0; i < 12; i++) {
-  let temperatureMonth = parseFloat(prompt(`Введіть температуру за ${Month} місяць`));
-  Month++;
+for (let i = 1; i <= 12; i++) {
+  let temperatureMonth = parseFloat(prompt(`Введіть температуру за ${i} місяць`));
   result += temperatureMonth;
 }
-result = result / 12;
- document.write(`Середньорічна температура становить ${result.toFixed(2)} градуси цельсія.`);
+averageTemperature = (result / 12).toFixed(2);
+ document.write(`Середньорічна температура становить ${averageTemperature} градуси цельсія.`);
