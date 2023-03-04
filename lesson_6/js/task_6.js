@@ -5,10 +5,8 @@ function getTable(row, column) {
     document.write(`<tr>`);
     for (let j = 0; j < column; j++) {
       document.write(`<th></th>`);
-      if (j ===column - 1) {
-        document.write(`</tr>`)
-      }
     }
+    document.write(`</tr>`)
   }
   document.write(`</table>`)
 }

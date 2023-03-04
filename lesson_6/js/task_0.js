@@ -1,14 +1,18 @@
 function getSeason(numberDayMonth) {
+  let season ='';
   if ( numberDayMonth <= 2 || numberDayMonth === 12)
-  document.write(`Пора року - зима`);
+  season = 'зима';
 else if (numberDayMonth <= 5)
-  document.write(`Пора року - весна`);
+  season = 'весна';
 else if (numberDayMonth <= 8)
-  document.write(`Пора року - літо`);
+  season = 'літо';
 else if (numberDayMonth <= 11)
-  document.write(`Пора року - осінь`);
+  season = 'осінь';
 else document.write(`Некоректне значення`);
+
+return `${numberDayMonth} місяць року  - ${season}`;
 }
 
 const numberDayMonth = parseInt(prompt('Введіть номер місяця', ''));
-const season = getSeason(numberDayMonth);
+const isSeason = getSeason(numberDayMonth);
+document.write(isSeason);
