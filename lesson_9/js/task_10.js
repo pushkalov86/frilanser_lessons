@@ -18,7 +18,7 @@ document.write(`Випадковий массив цін: ${randomArray}<br><br>
 
 function getResultArray(randomArray) {
   const tax = 0.2;
-  let resultArray = randomArray.map(item => Number(item * tax).toFixed(2));
+  let resultArray = randomArray.map(item => Math.floor(item * tax));
   return resultArray;
 }
 

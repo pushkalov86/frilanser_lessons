@@ -29,15 +29,10 @@ function getRandomNumbers (current) {
 const randomNumbers = getRandomNumbers();
 document.write(`Дано рандомний масив номерів: ${randomNumbers}<br><br>`);
 
-function getresultArray() {
-  let resultArray = [];
-  randomNumbers.forEach(item => {
-    if (item[0] === 'А') {
-      resultArray.push(item);
-    };
-  });
+function getresultArray(randomNumbers) {
+  let resultArray = randomNumbers.filter(item => item[0] === 'А' )
   return resultArray;
 };
 
- const resultArray = getresultArray();
+ const resultArray = getresultArray(randomNumbers);
  document.write(`Результат : ${resultArray}`);

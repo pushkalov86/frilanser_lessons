@@ -11,12 +11,8 @@ const randomArray = getRandomArray(10, 1, 10000);
 document.write(`Ваш випадковий масив цін від 1 10000: ${randomArray}<br><br>`);
 
 function getNumberPriceMore1000(randomArray) {
-  let numberPriceMore1000 = 0;
-  randomArray.forEach(element => {
-    if (element > 1000) {
-    numberPriceMore1000++;
-    };
-  });
+  let numberPriceMore1000 = randomArray.reduce((numberPriceMore1000, element) => 
+    element > 1000 ? numberPriceMore1000 + 1 : numberPriceMore1000, 0);
   return numberPriceMore1000;
 }
 const numberPriceMore1000 = getNumberPriceMore1000(randomArray);

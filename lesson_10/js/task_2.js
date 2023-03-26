@@ -8,16 +8,11 @@ function getRandomArray(currentArray, min, max) {
 };
 
 const randomArray = getRandomArray(10, 1, 10000);
-document.write(`Ваш випадковий масив цін від 1 10000: ${randomArray}<br><br>`);
+document.write(`Ваш випадковий масив цін від 1 до 10000: ${randomArray}<br><br>`);
 console.log(randomArray);
 
 function getBigPriceIndexArray(randomArray) {
-  let result = [];
-  randomArray.forEach((element, index) => {
-    if (element > 1000) {
-      result.push(index);
-    }
-  });
+  let result = randomArray.filter(element => element > 1000);
   return result;
 }
 

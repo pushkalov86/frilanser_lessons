@@ -20,7 +20,7 @@ const maxPrice = getMaxPrice(randomArray);
 document.write(`Максимальна ціна: ${maxPrice}.<br><br>`);
 
 function getPriceInPercentArray(randomArray) {
-  let result = randomArray.map(element => +(element * 100 / maxPrice).toFixed(1));
+  let result = randomArray.map(element => Math.floor(element * 100 / maxPrice));
   return result;
 }
 

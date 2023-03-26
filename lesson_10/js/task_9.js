@@ -13,8 +13,7 @@ document.write(`Ваш випадковий масив цін від 1 10000: ${
 function getSumPriceMore1000 (randomArray) {
 
   let sumPriceMore1000 = randomArray.reduce((sumPriceMore1000, element) => 
-    (element > 1000) ? sumPriceMore1000 + element : sumPriceMore1000
-  );
+    (element > 1000) ? sumPriceMore1000 + element : sumPriceMore1000, 0);
   return sumPriceMore1000;
 }
 

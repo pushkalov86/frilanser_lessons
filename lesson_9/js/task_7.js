@@ -17,8 +17,8 @@ const randomArray = getRandomArray(currentArray);
 document.write(`Випадковий массив: ${randomArray}<br><br>`);
 
 function getResultArray(randomArray) {
- let resultArray = [];
- const discount = 0.3;
+//  let resultArray = [];
+//  const discount = 0.3;
 //  for (let item of randomArray) {
 //    if (item > 1000) {
 //      resultArray.push(+(item - item * 0.3).toFixed(2));
@@ -28,15 +28,13 @@ function getResultArray(randomArray) {
 //  }
 //  return resultArray;
 // }
-  randomArray.forEach(element => {
+  randomArray.forEach((element, index, baseArr) => {
     if (element > 1000) {
-      resultArray.push(+(element - element * discount).toFixed(2));
-    } else {
-      resultArray.push(element);
+      baseArr[index] = Math.floor(element * 0.7);
     }
   })
-  return resultArray;
+  return randomArray;
 };
 
 const resultArray = getResultArray(randomArray);
-document.write(`Результат зі знижкою 30 відсотків на товари вартістю більше 1000: ${resultArray}<br><br>`);
+document.write(`Результат зі знижкою 30 відсотків на товари вартістю більше 1000: ${resultArray}.<br><br>`);

@@ -17,16 +17,14 @@ const randomArray = getRandomArray(currentArray);
 document.write(`Випадковий массив: ${randomArray}<br><br>`);
 
 function getResultArray(randomArray) {
- let resultArray = [];
- for (let item of randomArray) {
-   if (item > randomArray[0]) {
-     resultArray.push(item * 2);
-   } else {
-    resultArray.push(item);
-   }
- }
- return resultArray;
-}
+  randomArray.forEach((element, index, baseArr) => {
+    if (element > baseArr[0]) {
+      baseArr[index] = element * 2;
+    }
+  });
 
-const resultArray = getResultArray(randomArray);
-document.write(`Результат: ${resultArray}<br><br>`);
+  return randomArray;
+ }
+
+document.write(`Результат: ${getResultArray(randomArray)}<br><br>`);
+

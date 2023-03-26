@@ -11,7 +11,7 @@ const randomArray = getRandomArray(10, 1, 10000);
 document.write(`Ваш випадковий масив цін від 1 10000: ${randomArray}<br><br>`);
 
 function isPriceLess1000 (randomArray) {
-  let result = randomArray.find(element => element < 1000)
+  let result = randomArray.some(element => element < 1000)
   return result;
 };
 

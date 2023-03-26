@@ -9,7 +9,7 @@ function randomArrray(current) {
   //   }
   // }
   const resultArray = new Array(current);
-  resultArray.fill(1, 0, Math.ceil(current / 2)).fill(7, Math.ceil(current / 2), current);
+  resultArray.fill(1, 0, Math.ceil(current / 2)).fill(7, Math.ceil(current / 2));
 
   return resultArray;
 }

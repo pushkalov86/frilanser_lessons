@@ -1,14 +1,18 @@
 function getResultArray(n) {
   let currentArray = new Array(n).fill(1);
-  let naturalArray = [1, 2, 3, 5, 7];
   let resultArray = [];
-  // let min = 0;
-  let max = naturalArray.length - 1;
+  let current = 1;
 
-  currentArray.forEach((element, n) => {
-    let randomIndex = Math.floor(Math.random() * (max + 1));
-    resultArray.push(naturalArray[randomIndex]);
-  })
+  currentArray.forEach((element, index) => {
+    if (index < Math.floor(n / 2)) {
+      resultArray.push(current);
+      current++;
+    }
+    if (index >= n / 2) {
+      current--;
+      resultArray.push(current);
+    }
+  });
 
   return resultArray;
 };

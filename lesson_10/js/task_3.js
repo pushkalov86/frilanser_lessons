@@ -13,13 +13,23 @@ console.log(randomArray);
 
 function getBigPriceIndexArray(randomArray) {
   let result = [randomArray[0]];
-  randomArray.forEach((element) => {
-    if (element > result[result.length - 1]) {
+  randomArray.forEach((element, index, baseArr) => {
+    if (result[result.length - 1] < baseArr[index]) {
       result.push(element);
     }
   });
   return result;
 }
+
+// function getBigPriceIndexArray(randomArray) {
+//   let result = [randomArray[0]];
+//   randomArray.forEach((element) => {
+//     if (element > result[result.length - 1]) {
+//       result.push(element);
+//     }
+//   });
+//   return result;
+// }
 
 const bigPriceIndexArray = getBigPriceIndexArray(randomArray);
 document.write(`Масив індексів: ${bigPriceIndexArray}`);
