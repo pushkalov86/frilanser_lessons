@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+  </head>
+  <body>
+    <p>Задача 1. Розробити калькулятор</p>
+    <label> First number
+      <input type="text" name="" id="first" value="0">
+    </label>
+    <label> Second number
+      <input type="text" name="" id="second" value="0">
+    </label>
+    <div>
+      <button type="button" id="sum" onclick="getSum()">Додати</button>
+      <button type="button" id="away" onclick="getAway()">Відняти</button>
+      <button type="button" id="mult" onclick="getMult()">Помножити</button>
+      <button type="button" id="div" onclick="getDiv()">Поділити</button>
+    </div>
+    <label> Result
+      <input type="text" name="" id="result" value="0" readonly>
+    </label>
+    <script src="../js/task_1.js"></script>
+  </body>
+</html>
