@@ -1,0 +1,22 @@
+.searchBlock {
+  border: 2px solid green;
+  width: 200px;
+  height: 400px;
+  padding: 30px 10px;
+}
+
+body {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+input {
+  margin-left: 10px;
+  width: 100px;
+  border: 2px solid black;
+}
+
+.result {
+  display: flex;
+  gap: 100px;
+}

@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  align-items: center;
+}
+.numberProduct {
+  display: flex;
+  margin-left: 50px;
+}
+.blockMinus {
+  width: 36px;
+  height: 36px;
+  border: 3px solid black;
+  position: relative;
+  box-sizing: border-box;
+}
+.blockMinus::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+}
+.blockPlus {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+  position: relative;
+}
+.blockPlus::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 5px;
+  width: 2px;
+  height: 20px;
+  background-color: black;
+}
+.blockPlus::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+}
+.blockNumber {
+  margin: 10px;
+}
